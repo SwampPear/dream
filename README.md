@@ -15,3 +15,15 @@ java-like package system
 c++-like brackets
 rust-like memory safety
 python-like string formatting
+rust-like cargo system
+
+# CLI
+run a file (uses a Makefile-like system)
+```
+dream main.drm
+```
+
+compile a project
+```
+dream -c main.drm
+```
