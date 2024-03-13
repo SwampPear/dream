@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="dream logo" src="assets/dream_logo.svg" style="width: 50%">   
+  <img alt="dream logo" src="assets/dream_logo.svg" style="width: 25%">   
 </p>
 
 <p align="center" style="height: 32px">
@@ -11,3 +11,7 @@
 <br>
 
 file extensions: .drm, .dream
+java-like package system
+c++-like brackets
+rust-like memory safety
+python-like string formatting
