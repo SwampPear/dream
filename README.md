@@ -8,8 +8,6 @@
   <img align="middle" style="height: 21px" alt="built with love <3" src="http://ForTheBadge.com/images/badges/built-with-love.svg">
 </p>
 
----
-
 # Dream
 
 file extensions: .drm, .dream
