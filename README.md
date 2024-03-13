@@ -8,7 +8,9 @@
   <img align="middle" style="height: 21px" alt="built with love <3" src="http://ForTheBadge.com/images/badges/built-with-love.svg">
 </p>
 
-<br>
+---
+
+# Dream
 
 file extensions: .drm, .dream
 java-like package system
