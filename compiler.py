@@ -1,4 +1,4 @@
-from argparse import ArgumentParser, BooleanOptionalAction
+from argparse import ArgumentParser
 
 
 class Lexeme:
@@ -22,14 +22,24 @@ class Compiler:
         """
         self.parser.add_argument('main', help='main file')
 
-    def _read(self, filename) -> str:
+    def _read(self, file) -> str:
         """
         Reads from a file.
         """
         content = ''
 
-        with open(filename, "r") as file:
-            content = file.read()
+        with open(file, "r") as f:
+            content = f.read()
+
+        return content
+    
+    def _write(self, file, content) -> None:
+        """
+        Writes to a file.
+        """
+
+        with open(file, "r") as f:
+            f.write(content)
 
         return content
         
@@ -37,8 +47,8 @@ class Compiler:
         """
         Compiles a file.
         """
-        content = self._read(main)      # read raw file
-        content = self._parse(content)  # parser
+        raw = self._read(main)      # read raw file
+        asm = self._parse(raw)      # parser
 
     def _parse(self, content: str) -> str:
         """
