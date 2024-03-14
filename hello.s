@@ -7,7 +7,7 @@ _start:
     system calls made through register 0
     SYS_EXIT = 1
     mov can be used to move small numbers into registers under 255
-     */
+    */
     mov X0, #1
 
     adr X1, helloworld // string to print
@@ -16,7 +16,7 @@ _start:
 
     /*
     software interrupt
-     */
+    */
     svc #0
 
     // Setup the parameters to exit the program
