@@ -4,9 +4,6 @@ from argparse import ArgumentParser
 class Compiler:
     """
     Initial compiler for the Dream language.
-
-    Uses node based compilation:
-    echc
     """
     def __init__(self):
         self.parser = ArgumentParser(description='initial compiler for Dream')

@@ -32,12 +32,12 @@ built in sockets - NOT IMPLEMENTED
 ## CLI
 run a file (uses a Makefile-like system)
 ```
-dream main.drm
+dream run
 ```
 
-compile a project
+build a project
 ```
-dream -c main.drm
+dream build
 ```
 
 ## STD Library
