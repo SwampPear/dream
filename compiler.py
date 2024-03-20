@@ -1,4 +1,6 @@
+import os
 from argparse import ArgumentParser
+from pathlib import Path
 
 
 class Compiler:
@@ -35,6 +37,14 @@ class Compiler:
             f.write(content)
 
         return content
+    
+    def _get_root(self, root) -> str:
+        """
+        Gets the absolute path of the root dir.
+        """
+
+        cwd = os.getcwd()
+        return str(Path(cwd, root))
         
     def _compile(self, main: str) -> None:
         """
@@ -52,7 +62,10 @@ class Compiler:
         
     def run(self) -> None:
         args = self.parser.parse_args()
-        self._compile(args.main)
+        root = self._get_root(args.main)
+        print(root)
+
+        #self._compile(args.main)
 
 
 if __name__ == '__main__':

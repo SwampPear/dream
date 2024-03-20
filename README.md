@@ -54,3 +54,38 @@ std::json
 std::time
 std::date
 std::log
+
+## Get Started
+
+create a new project
+
+```
+dream projectname
+```
+
+creates:
+
+```
+projectname
+-src
+--main.dream
+-dream.yaml
+```
+
+build a project
+
+```
+dream build
+```
+
+run a project
+
+```
+dream run
+```
+
+tests a project
+
+```
+dream test
+```
