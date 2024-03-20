@@ -1,24 +1,20 @@
 from argparse import ArgumentParser
 
 
-class Lexeme:
-    pass
-
-
 class Compiler:
     """
     Initial compiler for the Dream language.
+
+    Uses node based compilation:
+    echc
     """
     def __init__(self):
-        """
-        Mostly implements the parser.
-        """
         self.parser = ArgumentParser(description='initial compiler for Dream')
         self._init_parser()
         
     def _init_parser(self) -> ArgumentParser:
         """
-        Actually implements the parser.
+        Initializes the parser.
         """
         self.parser.add_argument('main', help='main file')
 
@@ -52,7 +48,7 @@ class Compiler:
 
     def _parse(self, content: str) -> str:
         """
-        Parses content based on lexigrahpical rules.
+        Parses content based on lexigraphical rules.
         """
         if ("int x = 2;" == content):
             print(content)
