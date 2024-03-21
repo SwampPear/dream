@@ -1,4 +1,5 @@
 import os
+import re
 from argparse import ArgumentParser
 from pathlib import Path
 
@@ -44,7 +45,15 @@ class Compiler:
         """
 
         cwd = os.getcwd()
+
         return str(Path(cwd, root))
+    
+    def _get_main(self, root) -> str:
+        """
+        Gets the main file.
+        """
+
+        return str(Path(root, 'src', 'main.dream'))
         
     def _compile(self, main: str) -> None:
         """
@@ -57,13 +66,19 @@ class Compiler:
         """
         Parses content based on lexigraphical rules.
         """
-        if ("int x = 2;" == content):
-            print(content)
+        # sanitize comments
+        content = re.sub(r'#>\s*((?:.*\n)*?)\s*#>', '', content, flags=re.MULTILINE)
+        content = re.sub(r'#=>\s*((?:.*\n)*?)\s*#=>', '', content, flags=re.MULTILINE)
+        content = re.sub(r'#.*$', '', content, flags=re.MULTILINE)
+
+        print(content)
         
     def run(self) -> None:
         args = self.parser.parse_args()
         root = self._get_root(args.main)
-        print(root)
+        main = self._get_main(root)
+
+        self._compile(main)
 
         #self._compile(args.main)
 
